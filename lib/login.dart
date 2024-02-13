@@ -39,7 +39,6 @@ class LogIn extends StatelessWidget {
         child: Form(
           key: _formKey,
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
                 margin: EdgeInsets.all(8),
@@ -53,11 +52,11 @@ class LogIn extends StatelessWidget {
                           Text(
                             "X",
                             style: TextStyle(
-                                color: Color(0xFFEED54A), fontSize: 90),
+                                color: Color(0xFFEED54A), fontSize: 85),
                           ),
                           Text(
                             "O",
-                            style: TextStyle(color: Colors.black, fontSize: 90),
+                            style: TextStyle(color: Colors.black, fontSize: 85),
                           )
                         ],
                       ),
@@ -102,7 +101,7 @@ class LogIn extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(12),
+                margin: EdgeInsets.all(10),
                 child: ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState?.validate() ?? false) {
