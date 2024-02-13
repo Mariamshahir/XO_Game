@@ -30,7 +30,7 @@ class _XOScreenState extends State<XOScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/image2.png"),
+            image: AssetImage("assets/backgroung.png"),
             fit: BoxFit.cover,
           ),
         ),
