@@ -20,11 +20,11 @@ class LogIn extends StatelessWidget {
           children: [
             Text(
               "Xo",
-              style: TextStyle(color: Color(0xFFEECC39),fontSize: 25),
+              style: TextStyle(color: Color(0xFFEECC39), fontSize: 25),
             ),
             Text(
               "Game",
-              style: TextStyle(color: Colors.black87,fontSize: 25),
+              style: TextStyle(color: Colors.black87, fontSize: 25),
             ),
           ],
         ),
@@ -32,7 +32,7 @@ class LogIn extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/background.png"),
+            image: AssetImage("assets/backgroung.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -50,8 +50,15 @@ class LogIn extends StatelessWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text("X",style: TextStyle(color: Color(0xFFEED54A),fontSize: 90),),
-                          Text("O",style: TextStyle(color: Colors.black,fontSize: 90),)
+                          Text(
+                            "X",
+                            style: TextStyle(
+                                color: Color(0xFFEED54A), fontSize: 90),
+                          ),
+                          Text(
+                            "O",
+                            style: TextStyle(color: Colors.black, fontSize: 90),
+                          )
                         ],
                       ),
                     ],
@@ -92,7 +99,8 @@ class LogIn extends StatelessWidget {
                   onChanged: (text) {
                     player2 = text;
                   },
-                ),            ),
+                ),
+              ),
               Container(
                 margin: EdgeInsets.all(12),
                 child: ElevatedButton(
@@ -104,12 +112,11 @@ class LogIn extends StatelessWidget {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    minimumSize: Size(100, 50),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    )
-                  ),
+                      backgroundColor: Colors.green,
+                      minimumSize: Size(100, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      )),
                   child: Text("Start Game",
                       style: TextStyle(color: Colors.white, fontSize: 20)),
                 ),
