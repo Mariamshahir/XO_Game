@@ -32,7 +32,7 @@ class LogIn extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/image2.png"),
+            image: AssetImage("assets/background.png"),
             fit: BoxFit.cover,
           ),
         ),
