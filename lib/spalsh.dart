@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/image2.png")),
+          image: DecorationImage(image: AssetImage("assets/backgroung.png")),
         ),
       ),
     );
