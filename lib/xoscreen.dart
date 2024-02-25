@@ -96,17 +96,17 @@ class _XOScreenState extends State<XOScreen> {
                 children: [
                   XOButton(
                     synbol: board[0],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 0,
                   ),
                   XOButton(
                     synbol: board[1],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 1,
                   ),
                   XOButton(
                     synbol: board[2],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 2,
                   ),
                 ],
@@ -118,17 +118,17 @@ class _XOScreenState extends State<XOScreen> {
                 children: [
                   XOButton(
                     synbol: board[3],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 3,
                   ),
                   XOButton(
                     synbol: board[4],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 4,
                   ),
                   XOButton(
                     synbol: board[5],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 5,
                   ),
                 ],
@@ -140,17 +140,17 @@ class _XOScreenState extends State<XOScreen> {
                 children: [
                   XOButton(
                     synbol: board[6],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 6,
                   ),
                   XOButton(
                     synbol: board[7],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 7,
                   ),
                   XOButton(
                     synbol: board[8],
-                    onClick: OnButtonClick,
+                    onClick: onButtonClick,
                     index: 8,
                   ),
                 ],
@@ -162,7 +162,7 @@ class _XOScreenState extends State<XOScreen> {
     );
   }
 
-  void OnButtonClick(int index,GameBoardArgs args) {
+  void onButtonClick(int index,GameBoardArgs args) {
     if (board[index].isNotEmpty) return;
     if (counter % 2 == 0) {
       board[index] = "o";
@@ -170,7 +170,7 @@ class _XOScreenState extends State<XOScreen> {
       board[index] = "x";
     }
 
-    if (CheckWinner(board[index])) {
+    if (checkWinner(board[index])) {
       if (board[index] == "o") {
         player1Score++;
         showWinDialog(args.player1);
@@ -196,10 +196,11 @@ class _XOScreenState extends State<XOScreen> {
       "","","",
       "","",""
     ];
+    counter=0;
     setState(() {});
   }
 
-  bool CheckWinner(String symbol){
+  bool checkWinner(String symbol){
     if(board[0] == symbol && board[1] == symbol && board[2] == symbol){
       return true;
     }
